@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS cuisine(
 CREATE TABLE IF NOT EXISTS menu (
     Item VARCHAR(20) PRIMARY KEY,
     Price DECIMAL(5,2) NOT NULL,
-    CuisineCountry VARCHAR(20),
+    CuisineCountry VARCHAR(20) NOT NULL
     FOREIGN KEY (CuisineCountry) REFERENCES cuisine(CuisineCountry)
         ON UPDATE CASCADE
 );
